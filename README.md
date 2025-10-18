@@ -35,3 +35,6 @@ Font Awesome / Lucide Icons	Icônes vectorielles
 ✅ Formulaire de contact fonctionnel
 ✅ Design 100% responsive
 ✅ Animation fluide et expérience utilisateur soignée
+
+## Lien vers le rendu du site
+https://hoda-academy-web.onrender.com
