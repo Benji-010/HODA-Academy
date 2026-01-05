@@ -143,11 +143,10 @@
       <li><a href="#apropos" class="hover:text-blue-600">À propos</a></li>
       <li><a href="#formations" class="hover:text-blue-600">Formations</a></li>
       <li><a href="#galerie" class="hover:text-blue-600">Témoignages</a></li>
-      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
     </ul>
 
     <a
-      href="#"
+      href="#contact"
       class="mt-10 inline-block bg-orange-500 text-white
              px-6 py-3
              text-lg
@@ -514,67 +513,73 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('-translate-x-full');
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('-translate-x-full'); // toggle menu
+    });
+
+    // Smooth scrolling function
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({
+            behavior: 'smooth'
         });
+    }
 
-        // Smooth scrolling function
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Add click handlers to navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                scrollToSection(targetId);
-                // Close mobile menu if open
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
+    // Add click handlers to navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            scrollToSection(targetId);
             
-            const formMessage = document.getElementById('form-message');
-            formMessage.className = 'mt-4 p-4 rounded-lg bg-blue-100 text-blue-800 border border-blue-200';
-            formMessage.textContent = 'Merci pour votre message ! Nous vous contacterons bientôt pour discuter de votre inscription.';
-            formMessage.classList.remove('hidden');
-            
-            // Reset form
-            e.target.reset();
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.classList.add('hidden');
-            }, 5000);
+            // Close mobile menu if open (remove translation)
+            if (!mobileMenu.classList.contains('-translate-x-full')) {
+                mobileMenu.classList.add('-translate-x-full');
+            }
         });
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98eaad5ad0050724',t:'MTc2MDQ4MjY2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Contact form handling
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formMessage = document.getElementById('form-message');
+        formMessage.className = 'mt-4 p-4 rounded-lg bg-blue-100 text-blue-800 border border-blue-200';
+        formMessage.textContent = 'Merci pour votre message ! Nous vous contacterons bientôt pour discuter de votre inscription.';
+        formMessage.classList.remove('hidden');
+        
+        // Reset form
+        e.target.reset();
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            formMessage.classList.add('hidden');
+        }, 5000);
+    });
+</script>
+
+   
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98eaad5ad0050724',t:'MTc2MDQ4MjY2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
 </html>
