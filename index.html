@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hope Digital Academy (HODA) - Former pour transformer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -39,14 +40,7 @@
         .card-hover {
             transition: all 0.3s ease;
         }
-
-        .background {
-          background-image: url('ressources/logo/images/étudiante.jpg');
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
-        }
-        
+       
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(71, 85, 105, 0.15);
@@ -62,7 +56,7 @@
         }
         
         .fade-in {
-            opacity: 0;
+            /* opacity: 0; */
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
@@ -91,84 +85,100 @@
 </head>
 <body class="bg-hoda-ivory text-gray-800 font-sans">
     <!-- Navigation -->
-<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20 relative">
-      
-      <!-- Bouton menu burger à gauche -->
-      <button id="menu-btn" class="absolute left-4 md:hidden p-2 rounded-md hover:bg-gray-100 transition">
-        <svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-      
-      <!-- Logo centré et bien contenu -->
-<div class="flex-1 flex justify-center items-center overflow-visible">
-  <img 
-  src="ressources/logo/images/Hoda blanc petit.jpg" 
-  alt="Logo HODA Academy" 
-  class="w-64 h-20 sm:w-72 sm:h-28 md:w-80 md:h-32 lg:w-96 lg:h-20 object-contain"
->
+<header class="min-h-screen bg-cover bg-center text-white"
+  style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url('/HODA-Academy/ressources/logo/images/background-img.jpeg');">
 
+  <!-- NAV -->
+  <nav class="bg-white text-gray-800 fixed top-0 w-full z-50">
+  <div class="relative max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+    <!-- ✅ BURGER : visible UNIQUEMENT en mobile -->
+    <button id="menu-btn" class="md:hidden text-gray-800 z-50">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- ✅ LOGO : centré en mobile, normal en desktop -->
+    <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+  <img
+    src="/HODA-Academy/ressources/logo/images/logo-hoda.jpeg"
+    alt="HODA Academy Logo"
+    class="w-64 sm:w-72 md:w-80 object-contain"
+  >
 </div>
 
+<!-- ✅ MENU DESKTOP -->
+<ul class="hidden md:flex items-center gap-10 font-medium text-lg tracking-wide">
+  <li><a href="#apropos" class="hover:text-blue-600 transition">À propos</a></li>
+  <li><a href="#formations" class="hover:text-blue-600 transition">Formations</a></li>
+  <li><a href="#galerie" class="hover:text-blue-600 transition">Témoignages</a></li>
+  <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+</ul>
 
+<!-- ✅ CTA DESKTOP -->
+<a
+  href="#"
+  class="hidden md:inline-block bg-orange-500 text-white
+         px-6 py-3
+         text-lg
+         rounded-xl
+         font-semibold
+         hover:bg-orange-600 transition"
+>
+  Commencez
+</a>
+</div>
 
-      <!-- Menu desktop (droite) -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#accueil" class="text-gray-700 hover:text-hoda-blue transition">Accueil</a>
-        <a href="#apropos" class="text-gray-700 hover:text-hoda-blue transition">À propos</a>
-        <a href="#formations" class="text-gray-700 hover:text-hoda-blue transition">Formations</a>
-        <a href="#galerie" class="text-gray-700 hover:text-hoda-blue transition">Galerie</a>
-        <a href="#contact" class="text-gray-700 hover:text-hoda-blue transition">Contact</a>
-      </div>
-    </div>
+<!-- ✅ MENU MOBILE -->
+<div
+  id="mobile-menu"
+  class="fixed top-0 left-0 h-full w-72 bg-white shadow-xl
+         transform -translate-x-full transition-transform duration-300
+         md:hidden z-40"
+>
+
+  <div class="p-6 mt-20">
+    <ul class="flex flex-col gap-8 text-lg font-medium">
+      <li><a href="#apropos" class="hover:text-blue-600">À propos</a></li>
+      <li><a href="#formations" class="hover:text-blue-600">Formations</a></li>
+      <li><a href="#galerie" class="hover:text-blue-600">Témoignages</a></li>
+      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+
+    <a
+      href="#"
+      class="mt-10 inline-block bg-orange-500 text-white
+             px-6 py-3
+             text-lg
+             rounded-xl
+             font-semibold
+             hover:bg-orange-600 transition"
+    >
+      Commencez
+    </a>
   </div>
+</div>
 
-  <!-- Menu mobile -->
-  <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-    <div class="px-4 py-3 space-y-2">
-      <a href="#accueil" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Accueil</a>
-      <a href="#apropos" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">À propos</a>
-      <a href="#formations" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Formations</a>
-      <a href="#galerie" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Galerie</a>
-      <a href="#contact" class="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Contact</a>
-    </div>
-  </div>
 </nav>
 
 
+  <!-- HERO -->
+  <div class="flex flex-col items-center justify-center text-center px-4 pt-40">
+    <p class="tracking-widest text-sm mb-4 opacity-90">
+      ACADÉMIE DE L’INNOVATION NUMÉRIQUE
+    </p>
 
+    <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+      Accélérez votre carrière<br class="hidden sm:block"> dans le digital
+    </h1>
 
-    <!-- Hero Section -->
-    <section id="accueil" class="min-h-full hero-pattern tech-grid pt-16">
-      <div class="background">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center">
-                <div class="floating-animation mb-8">
-                    <div class="w-24 h-24 gradient-bg rounded-full mx-auto flex items-center justify-center mb-6 pulse-glow">
-                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-4 fade-in">
-                    Hope Digital Academy
-                    <span class="block text-3xl md:text-4xl text-hoda-blue mt-2">(HODA)</span>
-                </h1>
-                <p class="text-2xl md:text-3xl text-hoda-dark-blue font-semibold mb-8 fade-in">
-                    Former pour transformer.
-                </p>
-                <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed fade-in">
-                    Bienvenue à Hope Digital Academy, le premier centre de formation aux numérique de Gemena dédié à l'autonomisation des jeunes à travers les compétences digitales et entrepreneuriales.
-                </p>
-                <button onclick="scrollToSection('contact')" class="gradient-bg text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 fade-in pulse-glow">
-                    S'inscrire à une formation
-                </button>
-            </div>
-        </div>
-        </div>
-    </section>
+    <a href="#" class="bg-blue-900 hover:bg-blue-800 px-8 py-4 rounded-xl font-semibold transition">
+      Découvrez nos formations
+    </a>
+  </div>
+</header>
 
     <!-- À propos -->
     <section id="apropos" class="py-20 bg-hoda-cream">
@@ -289,10 +299,10 @@
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in border border-hoda-blue/10">
                     <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
-                        <span class="text-2xl">🎨</span>
+                        <span class="text-2xl">🌐</span>
                     </div>
-                    <h3 class="text-xl font-bold text-hoda-blue mb-4">Design Graphique</h3>
-                    <p class="text-gray-600">Maîtrisez les outils de création visuelle et développez votre créativité artistique pour créer des designs impactants.</p>
+                    <h3 class="text-xl font-bold text-hoda-blue mb-4">Sensibilisation au Numérique</h3>
+                    <p class="text-gray-600">Découvrez les bases du digital, apprenez à utiliser les outils numériques essentiels et adoptez les bonnes pratiques pour évoluer en toute sécurité dans le monde connecté.</p>
                 </div>
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in border border-hoda-blue/10">
@@ -313,10 +323,10 @@
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in border border-hoda-blue/10">
                     <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-6">
-                        <span class="text-2xl">📊</span>
+                        <span class="text-2xl">🤝</span>
                     </div>
-                    <h3 class="text-xl font-bold text-hoda-blue mb-4">Analyse de Données</h3>
-                    <p class="text-gray-600">Apprenez à collecter, analyser et interpréter les données pour prendre des décisions éclairées et stratégiques.</p>
+                    <h3 class="text-xl font-bold text-hoda-blue mb-4">Softs Skills</h3>
+                    <p class="text-gray-600">Renforcez vos qualités humaines clés, améliorez votre communication et apprenez à mieux collaborer pour réussir dans vos études, vos projets et votre vie professionnelle.</p>
                 </div>
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg card-hover fade-in border border-hoda-blue/10">
@@ -424,7 +434,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-800 mb-2">WhatsApp</h3>
-                                <p class="text-gray-600">+243 xxx xxx xxx</p>
+                                <p class="text-gray-600">+243 837 558 574</p>
                             </div>
                         </div>
 
@@ -474,10 +484,10 @@
                             <select id="formation" name="formation" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-hoda-blue focus:border-transparent transition-colors bg-white">
                                 <option value="">Choisissez une formation</option>
                                 <option value="initiation">Initiation au Développement Web</option>
-                                <option value="design-graphique">Design Graphique</option>
+                                <option value="design-graphique">Sensibilisation au Numérique</option>
                                 <option value="marketing-digital">Marketing Digital</option>
                                 <option value="entrepreneuriat">Entrepreneuriat Numérique</option>
-                                <option value="analyse-donnees">Analyse de Données</option>
+                                <option value="analyse-donnees">Softs Skills</option>
                                 <option value="bureautique">Bureautique Avancée</option>
                             </select>
                         </div>
@@ -499,7 +509,7 @@
     <footer class="gradient-bg text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <p class="text-lg">© 2025 Hope Digital Academy — Tous droits réservés.</p>
+                <p class="text-lg">© 2026 Hope Digital Academy — Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -510,7 +520,7 @@
         const mobileMenu = document.getElementById('mobile-menu');
         
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('-translate-x-full');
         });
 
         // Smooth scrolling function

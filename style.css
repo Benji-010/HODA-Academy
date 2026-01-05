@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.header {
+  background: linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("../HODA-Academy/ressources/logo/images/background-img.jpeg") center/cover no-repeat;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+    height: auto;
+  width: 18rem;
+}
+
+.logo-text .subtitle {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1d2b4f;
+  font-weight: 500;
+}
+
+.btn {
+  background: #f28c28;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.tagline {
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.cta {
+  background: #1d2b4f;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
