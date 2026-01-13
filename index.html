@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hope Digital Academy (HODA) - Former pour transformer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ressources/style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -102,58 +102,54 @@
 
     <!-- ✅ LOGO : centré en mobile, normal en desktop -->
     <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
-  <img
-    src="ressources/logo/images/logo-hoda.jpeg"
-    alt="HODA Academy Logo"
-    class="w-64 sm:w-72 md:w-80 object-contain"
-  >
-</div>
+      <img src="ressources/logo/images/logo-hoda.jpeg"
+           alt="HODA Academy Logo"
+           class="w-56 md:w-72 object-contain">
+    </div>
 
-<!-- ✅ MENU DESKTOP -->
-<ul class="hidden md:flex items-center gap-10 font-medium text-lg tracking-wide">
-  <li><a href="#apropos" class="hover:text-blue-600 transition">À propos</a></li>
-  <li><a href="#formations" class="hover:text-blue-600 transition">Formations</a></li>
-  <li><a href="#galerie" class="hover:text-blue-600 transition">Témoignages</a></li>
-</ul>
-
-<!-- ✅ CTA DESKTOP -->
-<a
-  href="#contact"
-  class="hidden md:inline-block bg-orange-500 text-white
-         px-6 py-3
-         text-lg
-         rounded-xl
-         font-semibold
-         hover:bg-orange-600 transition"
->
-  Commencez
-</a>
-</div>
-
-<!-- ✅ MENU MOBILE -->
-<div
-  id="mobile-menu"
-  class="fixed top-0 left-0 h-full w-72 bg-white shadow-xl
-         transform -translate-x-full transition-transform duration-300
-         md:hidden z-40"
->
-
-  <div class="p-6 mt-20">
-    <ul class="flex flex-col gap-8 text-lg font-medium">
+    <!-- ✅ MENU DESKTOP : visible seulement en desktop -->
+    <ul class="hidden md:flex items-center gap-8 font-medium">
       <li><a href="#apropos" class="hover:text-blue-600">À propos</a></li>
       <li><a href="#formations" class="hover:text-blue-600">Formations</a></li>
       <li><a href="#galerie" class="hover:text-blue-600">Témoignages</a></li>
+      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      <li><a class="hidden md:inline-block
+         bg-[#8B2A6C] hover:bg-[#8B2A6C]
+         text-white px-5 py-2
+         rounded-lg font-semibold
+         transition" href="#recrutement">Dévenir Formateur</a></li>
     </ul>
 
-    <a
-      href="#contact"
-      class="mt-10 inline-block bg-orange-500 text-white
-             px-6 py-3
-             text-lg
-             rounded-xl
-             font-semibold
-             hover:bg-orange-600 transition"
-    >
+    <!-- ✅ CTA DESKTOP -->
+    <a href="#" class="hidden md:inline-block
+         bg-[#ea821f] hover:bg-[#ea821f]
+         text-white px-5 py-2
+         rounded-lg font-semibold
+         transition">
+      Commencez
+    </a>
+  </div>
+
+  <!-- ✅ MENU MOBILE : panneau à GAUCHE -->
+  <!-- MENU MOBILE -->
+<div id="mobile-menu"
+  class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg
+         transform -translate-x-full
+         transition-transform duration-300
+         md:hidden z-40">
+
+  <div class="p-6 mt-16">
+    <ul class="flex flex-col gap-6 font-medium">
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#formations">Formations</a></li>
+      <li><a href="#galerie">Témoignages</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#recrutement">Devenir Formateur</a></li>
+    </ul>
+
+    <a href="#"
+      class="mt-8 inline-block text-white px-5 py-2 rounded-lg font-semibold"
+      style="background: #ea821f;">
       Commencez
     </a>
   </div>
@@ -172,7 +168,7 @@
       Accélérez votre carrière<br class="hidden sm:block"> dans le digital
     </h1>
 
-    <a href="#formations" class="bg-blue-900 hover:bg-blue-800 px-8 py-4 rounded-xl font-semibold transition">
+    <a href="#" class="bg-blue-900 hover:bg-blue-800 px-8 py-4 rounded-xl font-semibold transition">
       Découvrez nos formations
     </a>
   </div>
@@ -420,7 +416,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Adresse</h3>
-                                <p class="text-gray-600">Gemena, Province du Sud-Ubangi, RDC</p>
+                                <a class="text-gray-600" href="https://www.google.com/maps/search/?api=1&query=Gemena%2C%20RDC" target="_blank" rel="noopener noreferrer">Gemena, Province du Sud-Ubangi, RDC</a>
                             </div>
                         </div>
 
@@ -432,7 +428,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-800 mb-2">WhatsApp</h3>
-                                <p class="text-gray-600">+243 837 558 574</p>
+                                <a class="text-gray-600" href="https://wa.me/243837558574" target="_blank">+243 837 558 574</a>
                             </div>
                         </div>
 
@@ -444,7 +440,7 @@
                             </div>
                             <div>
                                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Email</h3>
-                                <p class="text-gray-600">formation.hoda@gmail.com</p>
+                                <a class="text-gray-600" href="mailto:formation.hoda@gmail.com" target="_blank">formation.hoda@gmail.com</a>
                             </div>
                         </div>
 
@@ -503,6 +499,52 @@
         </div>
     </section>
 
+    <!-- Dévenir formateur -->
+     <!-- <section id="recrutement" class="py-20 bg-hoda-ivory tech-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 fade-in">Rejoignez l'aventure HODA ! 🚀</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto fade-in">
+            Vous voulez devenir coach et transformer le futur numérique de Gemena ? 
+            Même si vous n'êtes pas encore expert, nous formons les passionnés motivés.
+        </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+            <a href="https://wa.me/243837558574" style="background-color: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-right: 10px;">
+                Postuler via WhatsApp
+            </a>
+            <a href="mailto:formation.hoda@gmail.com?subject=Candidature Coach HODA" style="background-color: #0056b3; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                Envoyer mon CV par Email
+            </a>
+        </div>
+    </div>
+    </section> -->
+
+    <section id="recrutement" class="max-w-4xl mx-auto px-4 text-center mb-10">
+
+  <section id="recrutement">
+    <div style="max-width: 800px; margin: auto; border: 2px dashed #0056b3; padding: 30px; border-radius: 15px;">
+        <h2 style="color: #0056b3; margin-top: 0;">Devenez Coach chez HODA ! 🚀</h2>
+        <p style="font-size: 1.1em; color: #333; line-height: 1.6;">
+            Vous êtes passionné par le digital et vous aimez transmettre ? <br>
+            <strong>Nous formons nos futurs coachs !</strong> Pas besoin d'être un expert dès le départ, nous recherchons avant tout de la motivation et de la pédagogie.
+        </p>
+        
+        <div style="margin-top: 30px;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSed1gy1mVqavgC6XE5TZHxwvYpDUypIEBiIejbf0AWBiDp9fA/viewform?usp=header" target="_blank" style="background-color: #0056b3; color: white; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em; display: inline-block; transition: 0.3s;">
+                Postuler maintenant (Formulaire)
+            </a>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+            Temps estimé : 5 à 10 minutes. Nous vous recontacterons par WhatsApp ou Email.
+        </p>
+    </div>
+</section>
+
+</section>
+
+
     <!-- Footer -->
     <footer class="gradient-bg text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -512,74 +554,22 @@
         </div>
     </footer>
 
-    <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('-translate-x-full'); // toggle menu
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // OUVERTURE / FERMETURE via translate
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('-translate-x-full');
+  });
+
+  // Quand on clique sur un lien → fermer le menu
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
     });
-
-    // Smooth scrolling function
-    function scrollToSection(sectionId) {
-        document.getElementById(sectionId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    // Add click handlers to navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            scrollToSection(targetId);
-            
-            // Close mobile menu if open (remove translation)
-            if (!mobileMenu.classList.contains('-translate-x-full')) {
-                mobileMenu.classList.add('-translate-x-full');
-            }
-        });
-    });
-
-    // Fade in animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Contact form handling
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formMessage = document.getElementById('form-message');
-        formMessage.className = 'mt-4 p-4 rounded-lg bg-blue-100 text-blue-800 border border-blue-200';
-        formMessage.textContent = 'Merci pour votre message ! Nous vous contacterons bientôt pour discuter de votre inscription.';
-        formMessage.classList.remove('hidden');
-        
-        // Reset form
-        e.target.reset();
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.classList.add('hidden');
-        }, 5000);
-    });
+  });
 </script>
 
-   
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98eaad5ad0050724',t:'MTc2MDQ4MjY2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98eaad5ad0050724',t:'MTc2MDQ4MjY2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
